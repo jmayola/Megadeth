@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pagina de Mayola</title>
+    <!-- Required meta tags -->
+    <link rel="stylesheet" href="estilos/styles.css" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="acciones/script.js" defer></script>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="body">
+    <header class="header">
+      <nav class="header__nav">
+        <div class="nav__icon" id="nav__icon">
+          <img src="imagenes/menu.png" class="icon" alt="" />
+        </div>
+        <h2 class="titulo_2">Megadeth</h2>
+        <ul class="nav__ul" id="menu__url">
+          <a class="url" href=""
+            ><li class="nav__ul__li">Acerca de Nosotros</li></a
+          >
+          <a class="url" href=""><li class="nav__ul__li">Tienda</li></a>
+          <a class="url" href=""><li class="nav__ul__li">Galeria</li></a>
+          <a class="url" href=""><li class="nav__ul__li">Contacto</li></a>
+        </ul>
+      </nav>
+    </header>
+    <div class="entrada">
+      <div
+        id="carouselExampleAutoplaying"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imagenes/fondo1.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes/fondo2.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes/fondo4.jpg" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <main class="main">
+      <article class="articulo">
+        <h3 class="titulo_3">Historia</h3>
+        <p class="parrafo">
+          Megadeth es una banda de thrash metal estadounidense creada a
+          principios de los años '80 y una de las responsables del auge de ese
+          género. Ha vendido más de 20 millones de copias.
+        </p>
+        <p class="parrafo">
+          Megadeth llegó a ser reconocida internacionalmente en la década de
+          1980 como una de las pioneras del movimiento thrash metal
+          estadounidense, pero estuvo condenada a cambios constantes en la
+          formación principal, en parte a causa del abuso de sustancias por
+          parte de Dave Mustaine. Después de recuperar la sobriedad y encontrar
+          una formación estable tras haber ingresado en una clínica a causa de
+          dichos problemas, Megadeth empieza a lanzar una cadena de álbumes
+          platino y álbumes de oro, incluido el álbum multi-platino y nominado
+          al Grammy, Countdown to Extinction, en 1992. Megadeth se disolvió en
+          el 2002 después de que Mustaine sufriese una grave lesión nerviosa en
+          su brazo izquierdo, pero después de una intensa terapia física, el
+          guitarrista reformó la banda en 2004 y Megadeth lanzó el álbum The
+          System Has Failed.
+        </p>
+      </article>
+    </main>
+    <section class="galeria" id="gal">
+      <div class="arriba"></div>
+      <div class="imagen" id="1" onclick="expand(id)">
+        <img src="imagenes/1.jpg" alt="" />
+      </div>
+      <div class="imagen" id="2" onclick="expand(id)">
+        <img src="imagenes/2.jpg" alt="" />
+      </div>
+      <div class="imagen" id="3" onclick="expand(id)">
+        <img src="imagenes/3.jpg" alt="" />
+      </div>
+      <div class="imagen" id="4" onclick="expand(id)">
+        <img src="imagenes/10.jpeg" alt="" />
+      </div>
+      <div class="imagen" id="5" onclick="expand(id)">
+        <img src="imagenes/12.jpg" alt="" />
+      </div>
+      <div class="abajo"></div>
+    </section>
+    <footer></footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

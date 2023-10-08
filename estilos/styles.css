@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Metrophobic&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Metrophobic", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.body {
+  background-color: #343840;
+}
+.img {
+  width: 50vw;
+  height: 50vw;
+  display: flex;
+  margin: auto;
+  place-content: center;
+  place-items: center;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #9b4153; */
+}
+.nav__icon {
+  width: 100px;
+}
+.icon {
+  width: 50px;
+  position: absolute;
+  right: 0.5rem;
+  cursor: pointer;
+  z-index: 1;
+  top: 0.5rem;
+}
+.header__nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.nav__ul {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  border: none;
+  flex-direction: column;
+  transform: translateY(-100%);
+  transition: all 1s ease;
+  gap: 10px;
+}
+
+.nav__ul__li {
+  border-bottom: 3px solid white;
+  padding: 0.5rem;
+}
+
+.nav__ul__li:hover {
+  border-radius: 10px;
+  transition: 300ms ;
+}
+.url {
+  font-size: 18px;
+  color: black;
+  border: none;
+  text-decoration: none;
+  text-shadow: 3px 3px 3px white;
+  color: yellow;
+}
+.url:hover {
+  color: white;
+}
+.rocio {
+  transform: translateY(0);
+}
+.h-50 {
+  height: 20vh;
+}
+.carousel-item img {
+  height: 100vh;
+  object-fit: cover;
+}
+.padding {
+  padding: 0 200px;
+}
+.main {
+  margin: 30px;
+  background-color: rgb(180, 180, 180);
+  border-radius: 30px;
+}
+.titulo_2 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Metal Mania', cursive;  
+  /* position: absolute; */
+  /* right: 1rem; */
+  text-shadow: 5px 2px 1px white;
+  color: rgb(255, 201, 22);
+  z-index: 5;
+  /* top: 1rem; */
+  /* right: 40%; */
+  cursor: grab;
+  transition: 1s;
+
+}
+.titulo_2:hover{
+  color: rgb(231, 59, 59);
+  transition: 1s;
+  transform: scale(0.9);
+}
+.titulo_3 {
+  text-align: left;
+  font-size: 2rem;
+  padding: 30px;
+  color: black;
+}
+.articulo {
+  padding: 20px;
+  text-align: justify;
+}
+.parrafo {
+  padding: 30px;
+  border-radius: 40px;
+  font-size: 18px;
+  color: black;
+}
+.parrafo:first-child {
+  background-color: rgb(51, 51, 51);
+}
+
+.parrafo:last-child {
+  background-color: rgb(71, 71, 71);
+}
+.entrada {
+  background-color: rgb(180, 180, 180);
+  text-align: center;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 30px;
+}
+.galeria {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  flex-wrap: nowrap;
+}
+.imagen {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  transition: 1s;
+  align-items: center;
+  justify-items: center;
+  width: 100px;
+  cursor: pointer;
+  object-fit: contain;
+}
+.imagen::after{
+  position: relative;
+  display: block;
+  right: 1rem;
+  bottom: 1rem;
+  width: 100px;
+  height: 100px;
+  background-color: #0578a6;
+}
+.expand {
+  width: 500px;
+}
+.arriba {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-style: solid;
+  border-width: 25vh 100vw 0 0;
+  border-color: #343840 transparent transparent transparent;
+}
+.abajo {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0 0 25vh 100vw;
+  border-color: transparent transparent #343840 transparent;
+}
+/* MEDIA QUERY */
+/* MEDIA QUERY */
+/* MEDIA QUERY */
+/* MEDIA QUERY */
+/* MEDIA QUERY */
+/* MEDIA QUERY */
+@media screen and (min-width: 768px) {
+  .nav__ul {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.5rem 2rem;
+    transform: translateY(0);
+  }
+  .icon {
+    display: none;
+  }
+  .nav__ul__li {
+    padding: 1rem;
+  }
+}
