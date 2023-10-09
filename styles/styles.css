@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Metrophobic&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -25,10 +25,17 @@ html {
 .header {
   display: flex;
   flex-direction: column;
+  padding: 10px;
   /* background-color: #9b4153; */
+}
+.button{
+  padding: 10px;
+  border: none;
+  font-size: 15px;
 }
 .nav__icon {
   width: 100px;
+  display: none;
 }
 .icon {
   width: 50px;
@@ -38,7 +45,7 @@ html {
   z-index: 1;
   top: 0.5rem;
 }
-.header__nav{
+.header__nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,7 +70,7 @@ html {
 
 .nav__ul__li:hover {
   border-radius: 10px;
-  transition: 300ms ;
+  transition: 300ms;
 }
 .url {
   font-size: 18px;
@@ -97,7 +104,7 @@ html {
 .titulo_2 {
   text-align: center;
   font-size: 3rem;
-  font-family: 'Metal Mania', cursive;  
+  font-family: "Metal Mania", cursive;
   /* position: absolute; */
   /* right: 1rem; */
   text-shadow: 5px 2px 1px white;
@@ -107,9 +114,8 @@ html {
   /* right: 40%; */
   cursor: grab;
   transition: 1s;
-
 }
-.titulo_2:hover{
+.titulo_2:hover {
   color: rgb(231, 59, 59);
   transition: 1s;
   transform: scale(0.9);
@@ -165,7 +171,7 @@ html {
   cursor: pointer;
   object-fit: contain;
 }
-.imagen::after{
+.imagen::after {
   position: relative;
   display: block;
   right: 1rem;
@@ -214,4 +220,19 @@ html {
   .nav__ul__li {
     padding: 1rem;
   }
+}
+#messages{
+  display: none;
+  position: fixed;
+  height: 30vh;
+  margin: auto;
+  width: 30vw;
+  background-color: #888;
+  border-radius: 10px;
+  border: solid black 2px;
+  z-index: 100;
+  right: 35%;
+  top: 5%;
+  align-items: center;
+  justify-content: center;
 }

@@ -19,6 +19,7 @@
     />
   </head>
   <body class="body">
+    <div id="messages"></div>
     <header class="header">
       <nav class="header__nav">
         <div class="nav__icon" id="nav__icon">
@@ -36,7 +37,24 @@
       </nav>
     </header>
     <div class="entrada">
-      <div
+    <section class="galeria" id="gal">
+      <div class="imagen" id="1"" onclick="expand(id)">
+        <img src="img/galery/1.jpg" alt="" />
+      </div>
+      <div class="imagen" id="2" onclick="expand(id)">
+        <img src="img/galery/2.jpg" alt="" />
+      </div>
+      <div class="imagen" id="3" onclick="expand(id)">
+        <img src="img/galery/3.jpg" alt="" />
+      </div>
+      <div class="imagen" id="4" onclick="expand(id)">
+        <img src="img/galery/10.jpeg" alt="" />
+      </div>
+      <div class="imagen" id="5" onclick="expand(id)">
+        <img src="img/galery/12.jpg" alt="" />
+      </div>
+    </section>
+      <!-- <div
         id="carouselExampleAutoplaying"
         class="carousel slide"
         data-bs-ride="carousel"
@@ -70,7 +88,7 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div>
+      </div> -->
     </div>
     <main class="main">
       <article class="articulo">
@@ -97,26 +115,7 @@
         </p>
       </article>
     </main>
-    <section class="galeria" id="gal">
-      <div class="arriba"></div>
-      <div class="imagen" id="1" onclick="expand(id)">
-        <img src="img/galery/1.jpg" alt="" />
-      </div>
-      <div class="imagen" id="2" onclick="expand(id)">
-        <img src="img/galery/2.jpg" alt="" />
-      </div>
-      <div class="imagen" id="3" onclick="expand(id)">
-        <img src="img/galery/3.jpg" alt="" />
-      </div>
-      <div class="imagen" id="4" onclick="expand(id)">
-        <img src="img/galery/10.jpeg" alt="" />
-      </div>
-      <div class="imagen" id="5" onclick="expand(id)">
-        <img src="img/galery/12.jpg" alt="" />
-      </div>
-      <div class="abajo"></div>
-    </section>
-    <footer></footer>
+    <footer class="footer"></footer>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
