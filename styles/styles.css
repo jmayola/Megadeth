@@ -30,8 +30,16 @@ html {
 }
 .button{
   padding: 10px;
+  margin: 10px;
   border: none;
+  justify-content: left;
   font-size: 15px;
+}
+.btn_section{
+  display: flex;
+  justify-content: flex-end;
+  align-content: stretch;
+  align-items: baseline;
 }
 .nav__icon {
   width: 100px;
@@ -182,6 +190,8 @@ html {
 }
 .expand {
   width: 500px;
+  border-left: 1rem solid #111;
+
 }
 .arriba {
   z-index: 2;
@@ -221,18 +231,26 @@ html {
     padding: 1rem;
   }
 }
+/* IDs */
+/* IDs */
+/* IDs */
+/* IDs */
+/* IDs */
+/* IDs */
 #messages{
   display: none;
   position: fixed;
-  height: 30vh;
-  margin: auto;
-  width: 30vw;
-  background-color: #888;
+  height: fit-content;
+  width: 20%;
+  transition: 1s;
+  color: #fff;
+  background-color: #c7c7c763;
   border-radius: 10px;
   border: solid black 2px;
   z-index: 100;
-  right: 35%;
+  flex-wrap: wrap;
   top: 5%;
+  right: 40%;
   align-items: center;
   justify-content: center;
 }

@@ -23,7 +23,7 @@
     <header class="header">
       <nav class="header__nav">
         <div class="nav__icon" id="nav__icon">
-          <img src="imagenes/menu.png" class="icon" alt="" />
+          <img src="img/menu.png" class="icon" alt="" />
         </div>
         <h2 class="titulo_2">Megadeth</h2>
         <ul class="nav__ul" id="menu__url">
@@ -39,7 +39,7 @@
     <div class="entrada">
     <section class="galeria" id="gal">
       <div class="imagen" id="1"" onclick="expand(id)">
-        <img src="img/galery/1.jpg" alt="" />
+        <img src="img/galery/1.jpg" id="img_example" alt="" />
       </div>
       <div class="imagen" id="2" onclick="expand(id)">
         <img src="img/galery/2.jpg" alt="" />
@@ -53,6 +53,10 @@
       <div class="imagen" id="5" onclick="expand(id)">
         <img src="img/galery/12.jpg" alt="" />
       </div>
+    </section>
+    <section class="btn_section">
+      <button class="button" id="btn_destemp" onclick="DesTemp()">Desactivar Temporal</button>
+      <button class="button" id="btn_acttemp" onclick="ActTemp()">Activar Temporal</button>
     </section>
       <!-- <div
         id="carouselExampleAutoplaying"
