@@ -190,8 +190,6 @@ html {
 }
 .expand {
   width: 500px;
-  border-left: 1rem solid #111;
-
 }
 .arriba {
   z-index: 2;
@@ -237,20 +235,23 @@ html {
 /* IDs */
 /* IDs */
 /* IDs */
-#messages{
-  display: none;
+.messages{
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  text-align: center;
   position: fixed;
   height: fit-content;
   width: 20%;
   transition: 1s;
   color: #fff;
-  background-color: #c7c7c763;
+  background-color: #c7c7c780;
   border-radius: 10px;
   border: solid black 2px;
   z-index: 100;
   flex-wrap: wrap;
   top: 5%;
+  padding: 10px;
   right: 40%;
-  align-items: center;
-  justify-content: center;
 }
