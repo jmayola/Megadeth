@@ -8,52 +8,49 @@ let temp = true;
 menu.addEventListener("click", () => {
   cerrar_ventana.classList.toggle("rocio");
 });
-function MessageAd(text){
-  message.style.display = "flex";
-  message.style.flexDirection = "column";
-  message.style.placeContent = "center";
-  message.style.marginRight = "0%";
-  message.style.gap = "10px";
-  //añadir boton de cerrado
-  // let button = document.createElement("button");
-  // button.innerText = "cerrar";
-  // button.classList.add("button");
-  // button.setAttribute("onclick", "closeAd()");
-  message.innerHTML = "<p>"+text+"</p>";
+function MessageAd(text, time) {
+  let div = document.getElementById("messages");
+  let box = document.createElement("p");
+  box.innerHTML = text;
+  box.id = "texto";
+  box.classList.toggle("messages");
+  if (div.childNodes.length >= 1) {
+    div.removeChild(box);
+  }
+  div.appendChild(box);
   setTimeout(() => {
-    message.style.marginRight = "-100%";
-  },2500);
+    div.removeChild(box);
+  }, time);
 }
 function expand(id) {
   const image = document.getElementById(id);
   var galarray = galeria.children;
   for (let index = 0; index < galarray.length; index++) {
     galeria.children[index].classList.remove("expand");
-  } 
+  }
   //quitar todas las clases expand de todos los elemento
-    image.classList.add("expand");
-    if(temp){
-      setTimeout(() => {
-        image.classList.remove("expand");
-      }, 10000);
+  image.classList.add("expand");
+  if (temp) {
+    setTimeout(() => {
+      image.classList.remove("expand");
+    }, 10000);
 
     // despues de 10 segundos, se quita el expand
-    }
-    // expandimos la imagen, atribuyendo una clase
+  }
+  // expandimos la imagen, atribuyendo una clase
   gal.addEventListener("mouseleave", () => {
     image.classList.remove("expand");
   });
   // si salimos de la galeria, se quitan todos los expand
-  image.addEventListener("dblclick", ()=>{
+  image.addEventListener("dblclick", () => {
     image.classList.remove("expand");
-  })
+  });
   // con doble click, quitamos el expand
- 
 }
 gal.addEventListener("mouseover", () => {
   if (flag == 0) {
     flag = 1;
-   MessageAd("Prueba a Cliquear las Imagenes!")
+    MessageAd("Prueba a Cliquear las Imagenes!", 1000);
   }
 });
 function closeAd() {
@@ -61,13 +58,40 @@ function closeAd() {
   // se puede hacer sin transicion simplemente quitandole el display
   message.style.marginRight = "-100%";
 }
-function DesTemp(){
-  temp = false
-    MessageAd("Tiempo Desactivado Exitosamente!")
+function DesTemp() {
+  temp = false;
+  MessageAd("Tiempo Desactivado Exitosamente!", 1000);
   //solucionar eventos que cambian repentinamente
-  // se puede hacer creando y destuyendo mensajes en vez  de utiliza displays 
+  // se puede hacer creando y destuyendo mensajes en vez  de utiliza displays
 }
-function ActTemp(){
-  temp = true
-  MessageAd("Tiempo Reactivado Exitosamente!")
+function ActTemp() {
+  temp = true;
+  MessageAd("Tiempo Reactivado Exitosamente!", 1000);
+}
+document.addEventListener("keypress", (e) => {
+  switch (e.key) {
+    case "1":
+      expand(1);
+      break;
+    case "2":
+      expand(2);
+      break;
+    case "3":
+      expand(3);
+      break;
+    case "4":
+      expand(4);
+      break;
+    case "5":
+      expand(5);
+      break;
+  }
+});
+function whatsthis(){
+  MessageAd(`
+  <p>Clickea sobre los objetos para expandir las imagenes.</p>
+  <b>Desactivar Temporal:</b> Sirve para quitar la expansion de las imagenes despues de 10 segundos.
+  <b>Activar Temporal:</b> Sirve para quitarle la expansion a las imagenes despues de 10 segundos.
+  <b>Prueba a tocar los numeros del teclado entre el 1 al 5</b>
+  `, 6000)
 }
