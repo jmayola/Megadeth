@@ -8,10 +8,10 @@ let temp = true;
 menu.addEventListener("click", () => {
   cerrar_ventana.classList.toggle("rocio");
 });
-function MessageAd(text) {
+function MessageAd(text, time) {
   let div = document.getElementById("messages");
   let box = document.createElement("p");
-  box.innerText = text;
+  box.innerHTML = text;
   box.id = "texto";
   box.classList.toggle("messages");
   if (div.childNodes.length >= 1) {
@@ -20,7 +20,7 @@ function MessageAd(text) {
   div.appendChild(box);
   setTimeout(() => {
     div.removeChild(box);
-  }, 2500);
+  }, time);
 }
 function expand(id) {
   const image = document.getElementById(id);
@@ -50,7 +50,7 @@ function expand(id) {
 gal.addEventListener("mouseover", () => {
   if (flag == 0) {
     flag = 1;
-    MessageAd("Prueba a Cliquear las Imagenes!");
+    MessageAd("Prueba a Cliquear las Imagenes!", 1000);
   }
 });
 function closeAd() {
@@ -60,13 +60,13 @@ function closeAd() {
 }
 function DesTemp() {
   temp = false;
-  MessageAd("Tiempo Desactivado Exitosamente!");
+  MessageAd("Tiempo Desactivado Exitosamente!", 1000);
   //solucionar eventos que cambian repentinamente
   // se puede hacer creando y destuyendo mensajes en vez  de utiliza displays
 }
 function ActTemp() {
   temp = true;
-  MessageAd("Tiempo Reactivado Exitosamente!");
+  MessageAd("Tiempo Reactivado Exitosamente!", 1000);
 }
 document.addEventListener("keypress", (e) => {
   switch (e.key) {
@@ -87,3 +87,11 @@ document.addEventListener("keypress", (e) => {
       break;
   }
 });
+function whatsthis(){
+  MessageAd(`
+  <p>Clickea sobre los objetos para expandir las imagenes.</p>
+  <b>Desactivar Temporal:</b> Sirve para quitar la expansion de las imagenes despues de 10 segundos.
+  <b>Activar Temporal:</b> Sirve para quitarle la expansion a las imagenes despues de 10 segundos.
+  <b>Prueba a tocar los numeros del teclado entre el 1 al 5</b>
+  `, 6000)
+}
